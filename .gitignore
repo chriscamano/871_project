@@ -2,3 +2,6 @@
 /experiments/data
 /experiments/archives
 /experiments/saved_models
+
+.vscode
+*.pth
