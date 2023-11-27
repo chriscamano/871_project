@@ -44,6 +44,6 @@ def plot_all_metrics(data_list, labels, title="Model Performance"):
         plot_val_loss(axs[2], data, label)
         plot_val_accuracy(axs[3], data, label)
         plot_epoch_times(axs[4], data, label)
-
-    plt.tight_layout()
+    plt.tight_layout(rect=[0, 0.03, 1, 0.95])  # Adjust the layout
+    
     plt.show()
