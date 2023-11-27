@@ -31,11 +31,14 @@ def plot_epoch_times(ax, data, label):
     plot_on_axis(ax, data, "Epoch Times", "Time (seconds)", 'epoch_times_history', label)
 
 
-def plot_all_metrics(data_list, title="Model Performance"):
-    fig, axs = plt.subplots(5, 1, figsize=(10, 20))  
+def plot_all_metrics(data_list, labels, title="Model Performance"):
+    fig, axs = plt.subplots(5, 1, figsize=(10, 20))
+
+    if len(labels) != len(data_list):
+        raise ValueError("Length of labels list must match length of data_list")
 
     for i, data in enumerate(data_list):
-        label = f'Dataset {i+1}'
+        label = labels[i]  # Use the provided label
         plot_train_loss(axs[0], data, label)
         plot_train_accuracy(axs[1], data, label)
         plot_val_loss(axs[2], data, label)
@@ -44,4 +47,3 @@ def plot_all_metrics(data_list, title="Model Performance"):
 
     plt.tight_layout()
     plt.show()
-

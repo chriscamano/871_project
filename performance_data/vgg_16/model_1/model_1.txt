@@ -1,1 +1,11 @@
-{'train_losses_history': [0.018340577587485314, 0.007571641927585006, 0.005032376147806644, 0.0035881559614092113, 0.0025621101818047464], 'train_corrects_history': [array(0.613025, dtype=float32), array(0.83392495, dtype=float32), array(0.89234996, dtype=float32), array(0.921175, dtype=float32), array(0.94449997, dtype=float32)], 'val_losses_history': [tensor(0.0001, device='cuda:0'), tensor(5.5331e-05, device='cuda:0'), tensor(4.2770e-05, device='cuda:0'), tensor(4.3999e-05, device='cuda:0'), tensor(6.2443e-05, device='cuda:0')], 'val_corrects_history': [array(0.78901273, dtype=float32), array(0.85151273, dtype=float32), array(0.8746019, dtype=float32), array(0.8856489, dtype=float32), array(0.8971935, dtype=float32)], 'epoch_times_history': [642.050565349, 641.7380381010007, 642.004655951001, 640.3550320360009, 640.4359420790006]}
+{
+    'train_losses_history': [0.018413273210078476,
+                             0.007706005604937673,
+                             0.005127580802887678,
+                             0.0035404755352064967,
+                             0.0025758560922462493],
+    'train_corrects_history': [0.61425, 0.83045, 0.88827497, 0.92265, 0.94312495],
+    'val_losses_history': [7.8301e-05, 3.7627e-05, 4.4067e-05, 3.8414e-05, 4.6502e-05],
+    'val_corrects_history': [0.78632563, 0.85041803, 0.86932725, 0.89092356, 0.89968157],
+    'epoch_times_history': [624.3359296879999, 628.330103241, 640.219081019, 619.4468013270002, 624.4840897449994]
+}
