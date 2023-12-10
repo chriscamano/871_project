@@ -2,9 +2,7 @@ import torch
 import tqdm 
 from time import default_timer
 
-
-def train_loop(train_loader, model, optimizer, scheduler, loss_fn, epochs, use_scheduler=True):
-    """
+"""
     Abstract training loop for a deep learning model.
 
     Parameters:
@@ -20,7 +18,9 @@ def train_loop(train_loader, model, optimizer, scheduler, loss_fn, epochs, use_s
     - Trained model.
     - List of average losses for each epoch.
     - List of times taken for each epoch.
-    """
+"""
+
+def train_loop(train_loader, model, optimizer, scheduler, loss_fn, epochs, use_scheduler=True):
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print("Starting Training on", device)

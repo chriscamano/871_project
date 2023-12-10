@@ -8,12 +8,15 @@ def read_data_from_file(file_path):
     return data_dict
 
 def plot_on_axis(ax, data, title, ylabel, ydata_key, label, ydata_transform=lambda x: x):
-    ax.plot([ydata_transform(y) for y in data[ydata_key]], label=label)
+    # Get only the first five values from the data for plotting
+    ydata = [ydata_transform(y) for y in data[ydata_key][:5]]
+    ax.plot(ydata, label=label)
     ax.set_title(title)
     ax.set_xlabel('Epochs')
     ax.set_ylabel(ylabel)
     ax.legend()
     ax.grid(True)
+
 
 def plot_train_loss(ax, data, label):
     plot_on_axis(ax, data, "Training Loss", "Loss", 'train_losses_history', label)
